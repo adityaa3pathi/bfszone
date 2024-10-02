@@ -80,8 +80,10 @@ import prismadb from "../../../../lib/db";
 import { redirect } from "next/navigation";
 import { getProgress } from "../../../../actions/get-progress";
 import { CourseSidebar } from "./_components/course-sidebar";
-import NavBar from "./_components/course-navbar";
+import NavBar from "../../../componentss/nav-bar";
 import Footer from "../../../componentss/footer";
+import { CourseNavbar } from "./_components/CourseNavBar";
+
 
 
 const CourseLayout = async ({
@@ -133,24 +135,22 @@ const CourseLayout = async ({
   const progressCount = await getProgress(userId, course.id);
 
   return (
-    <div className="h-full">
-      <div>
-    {/* Fixed Navbar */}
-    <div className="fixed top-0 left-0 w-full h-[80px] z-50">
-      <NavBar course={course} progressCount={progressCount} />
+    <div className="flex flex-col justify-between bg-gray-00 text-gray-200 min-h-screen">
+    <div className="h-[80px] fixed w-full z-50">
+      <CourseNavbar 
+      course={course} progressCount={progressCount}/>
     </div>
-
-    {/* Fixed Sidebar */}
-    <div className="hidden flex-shrink-0 md:flex fixed top-[80px] left-0 w-80 h-[calc(100vh-80px)] z-40 flex-col border-r bg-white shadow-sm">
-      <CourseSidebar course={course} progressCount={progressCount}  />
-    </div>
-
-    {/* Main Content Area */}
-    <main className="md:pl-80 pt-[80px] h-full bg-gray-100">
-      {children}
+    <main className="flex flex-row justify-between gap-4 mt-[80px]"> {/* Ensure space below NavBar */}
+      <div className=" hidden md:flex w-[250px] flex-shrink-0"> {/* Define width for SideBar */}
+        <CourseSidebar course={course} progressCount={progressCount} />
+      </div>
+      <div className="flex-grow overflow-auto m-4"> {/* Adjust children to avoid overlap */}
+        {children}
+      </div>
     </main>
-    </div>
-    <Footer/>
+    <footer className="w-full bg-blue_gray-800 border-t shadow-sm z-50 ">
+      <Footer />
+    </footer>
   </div>
   );
 };

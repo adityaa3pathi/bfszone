@@ -1,14 +1,16 @@
 import { auth } from "@clerk/nextjs/server";
-import { Course } from "prisma/prisma-client";
+import { Chapter, Course, UserProgress } from "prisma/prisma-client";
 import NavBarContainer from "./navbar-container"; // Import client component
 import { usePathname, useRouter } from "next/navigation";
 import { useAuth } from "@clerk/nextjs";
 import { MobileSidebar } from "../(dashboard)/_components/mobile-sidebar";
 
 
+
+
 export default async function NavBar() {
 
-
+      
 
   const {userId} = auth();
 
@@ -20,7 +22,8 @@ export default async function NavBar() {
   return (<>
     
     <NavBarContainer
-      userId={userId}
+      userId={userId} // Pass userId from the server to the client
+     
       
     />
     </>

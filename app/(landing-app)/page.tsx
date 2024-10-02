@@ -50,7 +50,7 @@ export default  function Landing() {
     <Faqs/>
 </div> */}
 
-      <div className=" self-stretch">
+      <div className=" w-full bg-blue_gray-800 border-t shadow-sm z-50 self-stretch">
         {/* <FooterAction/> */}
         <Footer />
       </div>

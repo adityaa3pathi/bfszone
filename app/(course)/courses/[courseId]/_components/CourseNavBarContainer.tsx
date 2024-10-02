@@ -1,19 +1,29 @@
 "use client"; // This makes this file a client-side component
 
-import { Button } from "./ui/button";
+import { Button } from "../../../../componentss/ui/button";
 import Link from "next/link";
 import Image from "next/image";
 import { UserButton } from "@clerk/nextjs";
 import { useEffect, useState } from "react";
-import { MobileSidebar } from "../(dashboard)/_components/mobile-sidebar";
-import { usePathname } from "next/navigation";
 
-interface CourseNavbarProps {
-  userId?: string | null; // userId is passed as a prop from the server-side component
+import { usePathname } from "next/navigation";
+import { CourseMobileSidebar } from "./course-mobile-sidebar";
+import { Chapter, Course, UserProgress } from "@prisma/client";
+
+interface  CourseNavbarProps {
+    userId,
+    course: Course & {
+       chapters: (Chapter & {
+           userProgress: UserProgress[] | null; 
+       })[];
+    };
+    progressCount: number;
 }
 
 export default function NavBarContainer({
-  userId,
+    userId,
+    course,
+    progressCount,
 }: CourseNavbarProps) {
   const [isLoading, setIsLoading] = useState(true);
   const pathname = usePathname();
@@ -42,7 +52,7 @@ export default function NavBarContainer({
               {/* Conditionally render MobileSidebar only on small screens and specific routes */}
               {shouldShowMobileSidebar && (
                 <div className="md:hidden  bg-slate-600 flex items-center p-2 rounded">
-                  <MobileSidebar />
+                  <CourseMobileSidebar progressCount={progressCount} course={course}/>
                 </div>
               )}
               
