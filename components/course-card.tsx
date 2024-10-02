@@ -26,7 +26,7 @@ export const CourseCard = ({
 
 
        <Link href={`/courses/${id}`}>
-       <div className="group hover:shadow-sm transition overflow-hidden border rounded-lg p-3 h-full">
+       <div className=" group hover:shadow-sm transition overflow-hidden border rounded-lg p-3 h-full bg-slate-400 ">
          <div className="relative w-full aspect-video rounded-md overflow-hidden">
           <Image 
             fill
@@ -36,14 +36,15 @@ export const CourseCard = ({
 
        </div>
                <div className="flex flex-col pt-2">
-               <div className="text-lg md:text-base font-medium group-hover:text-sky-700 transition line-clamp-2">     
+               <div className="text-lg md:text-base font-medium text-gray-800 group-hover:text-gray-800 transition line-clamp-2">     
                        {title}
                    </div>
-                       <p className="text-xs text-muted-foreground ">
+                       <p className="text-xs 
+                       text-gray-800 ">
                        {category}
                        </p>
                               <div className="my-3 flex items-center gap-x-2 tet-sm md: text-xs">
-                            <div className="flex items-center gap-x-1 text-slate-500">
+                            <div className="flex items-center gap-x-1 text-gray-800 ">
 
                     <span>
                         {chaptersLength} {chaptersLength === 1 ? "Module" : "Modules"}
@@ -56,7 +57,7 @@ export const CourseCard = ({
                             todo: Progress component
                         </div>
                     ): (
-                        <p className="text-md md:text-sm font-medium text-slate-700">
+                        <p className="text-md md:text-sm font-medium text-gray-800 ">
                                 {formatPrice(price)}
                         </p>
                     )}

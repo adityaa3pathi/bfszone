@@ -78,7 +78,7 @@ export const CategoryForm = ({
 
 
     return (
-        <div className="mt-6 border bg-slate-100 rounded-md p-4"  >
+        <div className="mt-6 border bg-slate-700 rounded-md p-4"  >
 
             <div className="font-medium flex items-center justify-between">
                 Course Category
@@ -97,7 +97,7 @@ export const CategoryForm = ({
 
             {!isEditing && (
                 <p  className={cn("text-sm mt-2",
-                    !initialData.categoryId && "text-slate-500 italic"
+                    !initialData.categoryId && "text-slate-900 italic"
                 )}>
                     {selectedOption?.label || "No category"}
                 </p>
@@ -107,7 +107,7 @@ export const CategoryForm = ({
                 <Form {...form}>
                     <form 
                     onSubmit={form.handleSubmit(onSubmit)}
-                    className="space-y-4 mt-4">
+                    className="  space-y-4 mt-4">
 
                         <FormField
                         control={form.control}
@@ -115,10 +115,15 @@ export const CategoryForm = ({
                         render={({field}) => (
                             <FormItem>
                                 <FormControl>
+                                    <div className="position-relative bg-gray-700 text-gray-200">
                                    <Combobox
                                    options={options}
                                    {...field}
+                                   
+                                   // If you need to style the dropdown options
+                                   
                                    />
+                                   </div>
                                 </FormControl>
                                 <FormMessage/>
                             </FormItem>

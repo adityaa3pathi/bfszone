@@ -5,9 +5,10 @@ import { SidebarItem } from "./sidebarItem"
 export const SideBar = () => {
 
     return (
-      <div className="h-full border-r flex flex-col overflow-y-auto bg-white shadow-sm"> 
-       <Logo/>
-            <SidebarRoutes/>
-        </div> 
+        <div className="mt-6 fixed h-full w-[250px] border-r flex flex-col bg-white shadow-sm  left-0 top-[64px]    bg-white  overflow-y-auto">
+        
+        <SidebarRoutes />
+      </div>
+      
     )
 }

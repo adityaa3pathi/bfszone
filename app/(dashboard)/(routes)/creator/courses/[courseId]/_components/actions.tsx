@@ -66,8 +66,9 @@ export const Actions  = ({
 
     }
 
-   return ( <div className="flex items-center gap-x-2">
+   return ( <div className=" flex items-center gap-x-2">
         <Button
+        className="bg-slate-700 "
         onClick={onClick}
         disabled={disabled || isLoading}
         variant="outline"
@@ -76,7 +77,7 @@ export const Actions  = ({
                 {isPublished ? "Unpublish" : "Publish"}
         </Button>
         <ConfirModal onConfirm={onDelete}>
-        <Button  size="sm">
+        <Button className="bg-red-700" size="sm">
             <Trash  className="h-4 w-4"/>
         </Button>
         </ConfirModal>

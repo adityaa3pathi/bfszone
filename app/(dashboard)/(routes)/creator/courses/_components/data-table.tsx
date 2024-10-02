@@ -59,7 +59,7 @@ export function DataTable<TData, TValue>({
 
   return (
     <div>
-         <div className="flex items-center p-4 justify-between ">
+         <div className="flex bg-gray-500 items-center p-4 justify-between ">
         <Input
           placeholder="Filter courses..."
           value={(table.getColumn("title")?.getFilterValue() as string) ?? ""}
@@ -75,7 +75,7 @@ export function DataTable<TData, TValue>({
         </Button>
         </Link>
       </div>
-    <div className="rounded-md border">
+    <div className=" bg-gray-700 rounded-md border">
       <Table>
         <TableHeader>
           {table.getHeaderGroups().map((headerGroup) => (

@@ -70,7 +70,7 @@ import { Badge } from "../../../../../../../components/ui/badge";
 
             
         }
-    return (<div>
+    return (<div >
         
             <DragDropContext onDragEnd={onDragEnd}>
                 <Droppable droppableId= "chapters" > 
@@ -85,7 +85,7 @@ import { Badge } from "../../../../../../../components/ui/badge";
                     <div
         className={cn(
                       "flex items-center gap-x-border-slate-200 border text-slate-700 rounded-md mb-4 text-sm",
-                              chapter.isPublished && "bg-sky-100 border-sky-200 text-sky-700"
+                              chapter.isPublished && "bg-sky-100 border-sky-200 text-sky-500"
                                         )}
                                    ref={provided.innerRef}
                                    {...provided.draggableProps}>

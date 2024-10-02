@@ -11,7 +11,7 @@ const guestRoutes = [
     {
         icon: Layout,
         label: "DashBoard",
-        href: "/"
+        href: "/all-courses"
     },
     {
         icon: Compass,

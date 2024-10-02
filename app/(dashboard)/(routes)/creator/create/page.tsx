@@ -57,13 +57,13 @@ toast.success("Course created")
   
     return (  
 
-        <div className="max-w-5xl mx-auto flex md:items-center md:justify-center h-full p-6">
+        <div className="  bg-slate-500 max-w-5xl mx-auto flex md:items-center md:justify-center p-6 h-full">
            <div>
             <h1 className="text-2xl">
                 Name your course
             </h1>
 
-            <p className="text-sm text-slate-600">
+            <p className="text-sm text-slate-200">
                 you can change the name later, don&apos;t worry
             </p>
 
@@ -103,11 +103,13 @@ toast.success("Course created")
                             <Button
                                 type="button"
                                 variant='ghost'
+                                className="hover:bg-black"
                             > Cancel</Button>
                         </Link>
 
                             <Button
                             type="submit"
+                            className="text-sky-100 bg-black"
                             disabled={!isValid || isSubmitting}
                             >
                                 Continue

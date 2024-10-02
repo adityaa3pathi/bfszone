@@ -1,15 +1,11 @@
 import prismadb from "@/../lib/db";
 import { auth } from "@clerk/nextjs/server";
 import { NextResponse } from "next/server";
-import Mux from "@mux/mux-node"
 
 
 
-const { video } = new Mux({
-    tokenId: process.env.MUX_TOKEN_ID!,
-    tokenSecret: process.env.MUX_TOKEN_SECRET!,
- }
- );
+
+
  
      
 export async function DELETE(
@@ -46,11 +42,7 @@ export async function DELETE(
         }
 
 
-         for(const chapter of course.chapters) {
-            if(chapter.muxData?.assetId) {
-                await video.assets.delete(chapter.muxData.assetId);
-            }
-         }
+         
 
 
          const deletedsCourse = await prismadb.course.delete({

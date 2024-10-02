@@ -92,7 +92,7 @@ const CourseIdPage =  async (
 
             <div className="flex item-center justify-between">
                 <div className="flex flex-col gap-y-2">
-                    <h1 className="text-2xl font-medium">
+                    <h1 className= "text-gray-800 text-2xl font-medium">
                         Course Setup
 
                     </h1>
@@ -116,7 +116,7 @@ const CourseIdPage =  async (
                     <div className="flex items-center gap-x-2">
 
                     <IconBadge icon={LayoutDashboard} />
-                        <h2 className="text-xl">   
+                        <h2 className=" text-gray-700 text-xl">   
                             Customize your course
                         </h2>
                     </div>

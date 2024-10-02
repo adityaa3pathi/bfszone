@@ -1,9 +1,22 @@
+
+
+
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import "../styles/tailwind.css"
+import "../styles/index.css"
+import "../styles/font.css"
+
+
 import { ClerkProvider, SignInButton, SignedIn, SignedOut, UserButton } from '@clerk/nextjs'
 import { ToastProvider } from "@/../components/providers/toaster-provider";
 import { ConfettiProvider } from "../components/providers/confetti-provider";
+
+
+
+
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,9 +33,9 @@ export default function RootLayout({
   return (
     <ClerkProvider>
       <html lang="en">
-        <body>
+        <body >
           
-          <main>
+          <main >
             <ConfettiProvider/>
             <ToastProvider/>
             {children}</main>

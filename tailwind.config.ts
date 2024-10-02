@@ -14,6 +14,12 @@ const config = withUt({
 	],
   prefix: "",
   theme: {
+    screens: { 
+      md: "768px", 
+      lg: "1024px", 
+      xl: "1280px", 
+    },
+    
     container: {
       center: true,
       padding: "2rem",
@@ -22,10 +28,26 @@ const config = withUt({
       },
     },
     extend: {
+      boxShadow: {
+        'custom-lg': '0 10px 15px rgba(0, 0, 0, 0.2)', // Example custom shadow
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
+        blue_gray: {
+          300: "#9998be",
+          400: "#7b7aa3",
+          500: "#6e6da3",
+          700: "#4d4c7d",
+          800: "#001F3F",
+          },
+          gray: { 100: "#f5f5f5", 300: "#e3e4e8", 900: "#232323" },
+          indigo: { 300: "#8483b4", a200: "#6366f1" },
+          orange: { 300: "#ffb459" },
+          white: { a700: "#a35076" },
+          yellow: { 900: "#f99417" },
+          pink: {100:"#a35076"},
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         primary: {

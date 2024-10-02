@@ -1,6 +1,7 @@
 import { auth } from "@clerk/nextjs/server";
 import { NextResponse } from "next/server"
 import prismadb from "../../../../../lib/db";
+import { isTeacher } from "../../../../../lib/teacher";
 
 export async function POST(
     req: Request,
@@ -12,7 +13,7 @@ export async function POST(
     const {userId} = auth();
     const { url }  = await req.json();
 
-    if(!userId) {
+    if(!userId || !isTeacher(userId)) {
         return new NextResponse("unAuthorized", {status: 401});
     }
 

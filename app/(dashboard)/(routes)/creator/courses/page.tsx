@@ -9,9 +9,14 @@ import prismadb from "../../../../../lib/db";
 
 const CoursesPage = async () => {
 
-  const {userId} = auth();
+  const {userId} = await auth();
 
-  if(!userId) redirect("/")
+  if(!userId) {
+    console.log(userId)
+    redirect("/")
+   return null;
+    
+  }
 
     const courses = await prismadb.course.findMany({
         where: {
@@ -24,13 +29,9 @@ const CoursesPage = async () => {
 
     return ( 
 
-<div>
+<div >
 <DataTable columns={columns} data={courses} />
 </div>
-
-
-
-
      );
 }
 
