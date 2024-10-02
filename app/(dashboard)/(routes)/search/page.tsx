@@ -5,15 +5,18 @@ import { redirect } from "next/navigation";
 import { SearchPageClient } from "./SearchPageClient";
 
 interface SearchPageProps {
-  title: string;
-  categoryId: string;
+  searchParams: {
+    title: string;
+    categoryId: string;
+  };
 }
 
-const SearchPage = async (searchParams: SearchPageProps) => {
+const SearchPage = async ({ searchParams }: SearchPageProps) => {
   const { userId } = auth();
 
   if (!userId) {
     redirect("/sign-in");
+    return null; // Return null to avoid rendering after redirect
   }
 
   const categories = await prismadb.category.findMany({
