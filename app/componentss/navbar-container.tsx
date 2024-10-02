@@ -3,19 +3,16 @@
 import { Button } from "./ui/button";
 import Link from "next/link";
 import Image from "next/image";
-import { Course } from "@prisma/client";
 import { UserButton } from "@clerk/nextjs";
 import { useEffect, useState } from "react";
 import { MobileSidebar } from "../(dashboard)/_components/mobile-sidebar";
 import { usePathname } from "next/navigation";
 
 interface CourseNavbarProps {
-
   userId?: string | null; // userId is passed as a prop from the server-side component
 }
 
 export default function NavBarContainer({
-  
   userId,
 }: CourseNavbarProps) {
   const [isLoading, setIsLoading] = useState(true);
@@ -39,14 +36,12 @@ export default function NavBarContainer({
     <>
       <div className="bg-gray-200">
         <div className="flex flex-col items-center gap-[60px] py-2 sm:gap-[30px]">
-        
           <nav className="bg-gray-200 py-4 fixed top-0 z-50 shadow-custom-lg w-full">
-         
             <div className="container flex items-center justify-between mx-auto px-6 md:px-10">
               {/* Logo is always rendered */}
-               {/* Conditionally render MobileSidebar only on small screens and specific routes */}
-               {shouldShowMobileSidebar && (
-                <div className="md:hidden rounded-   bg-slate-600 flex items-center p-2 rounded">
+              {/* Conditionally render MobileSidebar only on small screens and specific routes */}
+              {shouldShowMobileSidebar && (
+                <div className="md:hidden  bg-slate-600 flex items-center p-2 rounded">
                   <MobileSidebar />
                 </div>
               )}
@@ -62,12 +57,9 @@ export default function NavBarContainer({
                   />
                 </Link>
                 <span className="text-2xl font-extrabold text-pink-100">
-                 
+                  {/* Logo Text or Other Content */}
                 </span>
               </div>
-
-              {/* Conditionally render MobileSidebar only on small screens and specific routes */}
-              
 
               {/* CTA Buttons */}
               <div className="flex items-center space-x-4">
@@ -81,10 +73,10 @@ export default function NavBarContainer({
                 </Link>
 
                 {/* Conditionally render UserButton or Sign Up */}
-                {<UserButton afterSignOutUrl="/" /> ? (
+                {userId ? ( // Check if userId exists
                   <UserButton afterSignOutUrl="/" /> // UserButton displayed if user is authenticated
                 ) : (
-                  null
+                  null // Render nothing if user is not authenticated
                 )}
               </div>
             </div>

@@ -32,9 +32,10 @@ export default function BasketballTrainingOverview() {
           <div className="flex flex-col gap-6 md:flex-row">
             <TrainingPromotion />
             <TrainingPromotion
-             promoImage={BadayaBhai1}
+              imageUrl="https://res.cloudinary.com/djrrvcvyl/image/upload/v1727693107/badayabhai2_phirtw.jpg"
               subheadingText="Improve Your Game"
               headingText="Master basketball techniques"
+              ctaText="Join Now"
               descriptionText="Step-by-step guidance from top coaches."
             
             />
