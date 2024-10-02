@@ -18,7 +18,7 @@ import OwnerCoachSection from "../componentss/OwnerCoachSection";
 import { auth } from "@clerk/nextjs/server";
 import { useAuth } from "@clerk/nextjs";
 
-export default async function Landing() {
+export default  function Landing() {
 
   
   return (

@@ -223,9 +223,10 @@ export const ChapterVideoForm = ({
             className="border p-2 w-full rounded"
             onChange={(e) => onSubmit({ videoUrl: e.target.value })}
         />
-        <div className="text-xs text-muted-foreground mt-4">
-            Enter the unlisted YouTube URL for this chapter's video.
-        </div>
+       <div className="text-xs text-muted-foreground mt-4">
+    Enter the unlisted YouTube URL for this chapter&apos;s video.
+</div>
+
                 </div>
             )}
             {initialData.videoUrl && !isEditing && (

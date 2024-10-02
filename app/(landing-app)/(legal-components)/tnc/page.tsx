@@ -20,9 +20,9 @@ const TermsAndConditions = () => {
       <section className="mb-8">
         <h2 className="text-2xl font-semibold mb-4 text-gray-800">2. Definitions</h2>
         <p className="text-gray-700 leading-relaxed">
-          - <strong>"Customer," "you," or "your"</strong> refers to the individual purchasing courses or using the website.<br />
-          - <strong>"Services"</strong> refers to the basketball courses, training materials, and other related services provided through our platform.<br />
-          - <strong>"Products"</strong> refers to the digital content, including videos, guides, and training modules sold on our website.
+          - <strong>&quot;Customer,&quot; &quot;you,&quot; or &quot;your&quot;</strong> refers to the individual purchasing courses or using the website.<br />
+          - <strong>&quot;Services&quot;</strong> refers to the basketball courses, training materials, and other related services provided through our platform.<br />
+          - <strong>&quot;Products&quot;</strong> refers to the digital content, including videos, guides, and training modules sold on our website.
         </p>
       </section>
 
