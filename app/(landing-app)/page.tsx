@@ -6,7 +6,7 @@ import "../styles/font.css";
 
 import HeroSection from "../componentss/hero-section";
 import NavBar from "../componentss/navbar-container";
-import Faqs from "../componentss/faqs";
+
 
 import BasketballTrainingOverview from "../componentss/basketball-training-overview";
 import { Text } from "../componentss/ui/text";
