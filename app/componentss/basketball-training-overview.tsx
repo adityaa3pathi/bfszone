@@ -11,7 +11,7 @@ export default function BasketballTrainingOverview() {
   return (
     <>
       {/* basketball training overview section */}
-      <div className="flex flex-col items-center bg-gray-200">
+      <div className="flex flex-col items-center bg-gray-50">
         <div className="container-xs flex flex-col gap-4 md:px-5">
           <div className="flex flex-col items-start gap-2">
             <Text

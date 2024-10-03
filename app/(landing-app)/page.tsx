@@ -23,16 +23,17 @@ export default  function Landing() {
   
   return (
     <>
-      <NavBar
+    <div className=" z-50">
+      <NavBar />
+       </div>
       
-      />
-      <div className="pt-[35px]">
+      <div className=" bg-gray-50 pt-[35px]">
         <HeroSection />
       </div>
-      <div className="bg-gray-200 py-[120px] md:py-5">
+      <div className="bg-gray-50 py-[120px] md:py-5">
         <BasketballTrainingOverview />
       </div>
-      <div className="contaimer-xs bg-gray-200 flex flex-col items-center self-center px-14 md:px-5">
+      <div className="contaimer-xs bg-gray-50 flex flex-col items-center self-center px-14 md:px-5">
         <p className="text-[18px] text-lg font-normal text-black py-8">
           Trusted by top atheletes
         </p>
@@ -50,7 +51,7 @@ export default  function Landing() {
     <Faqs/>
 </div> */}
 
-      <div className=" w-full bg-blue_gray-800 border-t shadow-sm z-50 self-stretch">
+      <div className=" w-full bg-gray-800 border-t shadow-sm z-50 self-stretch">
         {/* <FooterAction/> */}
         <Footer />
       </div>

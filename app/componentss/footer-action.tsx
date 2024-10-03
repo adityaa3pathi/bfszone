@@ -7,7 +7,7 @@ import { Button } from "./ui/button"
 
 export default function FooterAction() {
 
-return (<div className="flex justify-center bg-gray-200 py-[120px] md:py-5">
+return (<div className="flex justify-center bg-white py-[120px] md:py-5">
   <div
     className="container-xs flex items-center justify-between gap-5 md:flex-col md:px-5"
   >

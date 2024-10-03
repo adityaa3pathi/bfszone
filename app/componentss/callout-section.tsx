@@ -8,7 +8,7 @@ export default function CalloutSection() {
   return (
     <>
       {/* hero section */}
-      <div className="bg-gray-200 p-4">
+      <div className="bg-gray-50 p-4">
         <div className="flex flex-col md:flex-row items-center gap-3">
           <div className="p-6 py-[120px] md:p-5 flex-1">
             <div className="flex flex-col gap-10">

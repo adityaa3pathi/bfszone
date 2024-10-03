@@ -20,7 +20,7 @@ const HowItWorks = () => {
   ];
 
   return (
-    <div className="bg-gray-200 text-white px-5 py-10">
+    <div className="bg-gray-50 text-white px-5 py-10">
       <div className="mx-auto w-3/4 md:w-3/4 lg:w-1/2">
         <div className="text-center">
           <h1 className="text-5xl sm:text-5xl text-gray-800 font-bold mb-10">How It Works</h1>

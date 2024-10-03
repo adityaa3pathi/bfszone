@@ -22,7 +22,7 @@ export default async function NavBar() {
   return (<>
     
     <NavBarContainer
-      userId={userId} // Pass userId from the server to the client
+      // Pass userId from the server to the client
      
       
     />

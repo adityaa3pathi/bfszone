@@ -5,7 +5,7 @@
 
 /* Root color variables */
 :root {
-  --background: rgb(229 231 235);
+  --background: rgb(249 250 251);
 
   ; /* Light mode background */
   --foreground: #ffffff; /* Light mode text */
@@ -22,7 +22,7 @@
 
 /* Base styles */
 body {
-  background: rgb(229 231 235);
+  background: rgb(249 250 251);
 
   ;
 

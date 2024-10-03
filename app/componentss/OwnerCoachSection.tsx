@@ -6,7 +6,7 @@ import Image from "next/image";
 
 const OwnerCoachSection = () => {
   return (
-    <section className="relative py-12 px-6 bg-gray-200">
+    <section className="relative py-12 px-6 bg-gray-50">
       <div className="container mx-auto flex flex-col lg:flex-row lg:items-center lg: justify-between lg:space-x-8 ">
         {/* Image Section */}
         <div className="w-full lg:w-1/2 xl:w-1/3">

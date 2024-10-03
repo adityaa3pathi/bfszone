@@ -22,19 +22,25 @@ const AnalyticsPage = async () => {
     } = await getAnalytics(userId);
     return ( 
         <div className="p-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                
+            <div className=" grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                <div className="bg-gray-500 text-slate-100">
                 <DataCard
+                
                 label="Total Revenue"
                 value={totalRevenue}
                 shouldFormat />
+                </div>
+                < div className="bg-gray-500 text-slate-100">
                 <DataCard
                 label="Total Sales"
                 value={totalSales}
                  />
+                 </div>
             </div>
+            <div className="bg-gray-500 text-slate-100">
             <Chart
             data={data}/>
+            </div>
         </div>
      );
 }
